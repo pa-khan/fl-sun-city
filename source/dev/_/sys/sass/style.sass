@@ -3,7 +3,7 @@
 @import reset
 @import grid
 
-// @import ../../components/btn/btn
+@import ../../components/btn/btn
 // @import ../../components/check/check
 // @import ../../components/checkbox/checkbox
 // @import ../../components/radio/radio
@@ -19,3 +19,633 @@
 
 .overflow-disable
 	overflow: hidden
+
+.swiper-pagination-bullets
+	&.swiper-pagination
+		opacity: 1
+		padding: 0
+		font-size: 0
+		.swiper-pagination-bullet
+			opacity: 1
+			width: 19px
+			height: 19px
+			margin: 0 10px 0 0
+			transition: .3s
+			background: #E0E0E0
+			&:last-of-type
+				margin: 0
+			&:hover
+				background: darken(#E0E0E0, 10%)
+			&.swiper-pagination-bullet-active
+				background: #4F4F4F
+
+
+.header
+	padding-top: 50px
+	padding-bottom: 26px
+	&.--has-bg
+		background-color: #DED4CB
+	&__wrap
+		align-items: center
+	&__icon
+		width: 35px
+		margin-right: 75px
+	&__nav
+		width: calc(100% - 35px - 75px - 240px - 50px)
+		ul
+			justify-content: space-between
+		li
+			font-family: $noto
+			font-weight: 700
+			color: #4F4F4F 
+	&__feedback
+		width: 240px
+		margin-left: 50px
+	&__btn
+		display: inline-flex
+		margin-top: 20px
+		padding-left: 23px
+		padding-right: 23px
+
+
+.phone
+	align-items: center
+	&__icon
+		position: relative
+		top: 3px
+		width: 30px
+	&__value
+		font-size: 24px
+		line-height: 20px
+		font-family: $noto
+		width: calc(100% - 30px)
+		padding-left: 10px
+
+.socials
+	&.--col
+		ul
+			flex-direction: column
+		li
+			margin-bottom: 14px
+			&:last-of-type
+				margin-bottom: 0
+.bg-wrap
+	z-index: 1
+	position: relative
+
+.bg
+	z-index: -1
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+
+.noto
+	font-family: $noto
+
+.arrow
+	z-index: 20
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 51px
+	height: 51px
+	border-radius: 50%
+	background: rgba(0, 0, 0, 0.6)
+	transition: .3s
+	cursor: pointer
+	position: absolute
+	&:hover
+		background: rgba(0, 0, 0, 0.9)
+
+.intro
+	&__aside
+		display: flex
+		flex-direction: column
+		width: 29px
+		position: absolute
+		top: 0
+		bottom: 0
+		&:before, &:after
+			display: block
+			content: ''
+			width: 1px
+			height: 128px
+			margin-left: auto
+			margin-right: auto
+			background-color: #ABAAA7
+		&:before
+			margin-top: 80px
+			margin-bottom: auto
+		&:after
+			margin-top: auto
+			margin-bottom: 80px
+	&__socials
+		left: -45px
+	&__apps
+		position: absolute
+		top: 120px
+		left: 34px
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		position: relative
+		height: 674px
+		padding-top: 25px
+	&__logo
+		position: relative
+		&:after
+			display: block
+			content: ''
+			width: 284px
+			height: 1px
+			margin-top: 24px
+			margin-left: auto
+			margin-right: auto
+			background-color: #828282
+	&__btn
+		margin-top: 95px
+		width: 100%
+		max-width: 325px
+		margin-left: auto
+		margin-right: auto
+	&__lines
+		right: -45px
+		div
+			width: 100%
+			height: 5px
+			margin-bottom: 5px
+			background-color: #C4C4C4
+			&:nth-of-type(1)
+				height: 75px
+			&:last-of-type
+				margin-bottom: 0
+	// &__wrap
+		
+
+.apps
+	&__img
+		margin-top: -30px
+		margin-left: -34px
+		margin-bottom: -37px
+	&__title
+		font-weight: 300
+		line-height: 21px
+		margin-top: 30px
+		margin-bottom: 30px
+		color: #4F4F4F
+		strong
+			color: $black
+			font-weight: 500
+			display: block
+	&__link
+		margin-right: 23px
+		&:last-of-type
+			margin-right: 0
+
+.app
+	width: 109px
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 109px
+		height: 109px
+		border-radius: 50%
+		background-color: #C4C4C4
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 96px
+			height: 96px
+			top: 50%
+			left: 50%
+			border-radius: 50%
+			transform: translate(-50%,-50%)
+			box-shadow: inset 0px 4px 7px rgba(48, 48, 48, 0.25)
+	&__name
+		text-align: center
+		font-weight: 300
+		margin-top: 15px
+
+
+.services
+	padding-top: 80px
+	&__title
+		text-align: center
+		margin-bottom: 45px
+	&__wrap
+		margin-left: -62px
+		margin-right: -62px
+	&__list
+		justify-content: space-between
+		padding: 50px 70px 15px
+	&__item
+		padding: 30px 15px 15px
+		width: 450px
+		position: relative
+		margin-bottom: 27px
+		border: 1px solid #fff
+		&.--in-line
+			display: flex
+			align-items: center
+			width: 100%
+			padding: 30px
+			.services
+				&__subtitle
+					margin-bottom: 0
+					padding-left: 120px
+					padding-right: 120px
+				&__links
+					ul
+						flex-direction: row
+					li
+						margin-bottom: 0
+						&:after
+							width: 1px
+							height: 25px
+							margin-top: 0
+							display: inline-block
+							vertical-align: middle
+							margin-left: 45px
+							margin-right: 45px
+						&:last-of-type
+							&:after
+								display: none
+
+					
+			
+	&__lines
+		div
+			display: none
+			position: absolute
+			transition: .3s
+			background-color: #fff
+			&:nth-of-type(1), &:nth-of-type(3)
+				height: 1px
+				width: 100%
+			&:nth-of-type(2), &:nth-of-type(4)
+				width: 1px
+				height: 100%
+			&:nth-of-type(1)
+				top: 0
+				left: 0
+				// width: 0
+			&:nth-of-type(2)
+				right: 0
+				top: 0
+			&:nth-of-type(3)
+				right: 0
+				bottom: 0
+			&:nth-of-type(4)
+				bottom: 0
+				left: 0
+
+		&.--loaded
+			div
+				&:nth-of-type(1)
+					width: 100%
+				&:nth-of-type(2)
+					height: 100%
+				&:nth-of-type(3)
+					width: 100%
+				&:nth-of-type(4)
+					height: 100%
+			
+	&__subtitle
+		color: #fff
+		text-align: center
+		margin-bottom: 32px
+
+	&__links
+		ul
+			flex-direction: column
+			align-items: center
+		li
+			margin-bottom: 10px
+			&:after
+				display: block
+				content: ''
+				width: 26px
+				height: 1px
+				margin-top: 10px
+				margin-left: auto
+				margin-right: auto
+				background-color: #fff
+			&:last-of-type
+				margin-bottom: 0
+				&:after
+					display: none
+		a
+			color: #fff
+			font-family: $noto
+			font-weight: 700
+			letter-spacing: 0.03em
+			svg
+				top: -2px
+				position: relative
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px
+			&:hover
+				color: $black
+
+
+.offer
+	margin-top: 50px
+	margin-bottom: 100px
+	padding-top: 85px
+	border-top: 1px solid #BDBDBD
+	&__arrow
+		top: 230px
+		&.--prev
+			left: 0px
+		&.--next
+			left: 520px
+			
+	&__slider
+		position: relative
+	&__body
+		display: flex
+		flex-wrap: wrap
+		position: relative
+	&__inner
+		width: 625px
+		// position: relative
+		z-index: 1
+		padding-top: 170px
+	&__img
+		width: calc(100% - 625px)
+	&__name
+		z-index: 2
+		color: #fff
+		background-color: $black
+		text-transform: uppercase
+		padding: 21px 17px
+		position: absolute
+		top: 12px
+		left: 75px
+
+	&__text
+		font-size: 28px
+		line-height: 33px
+		font-weight: 500
+		max-width: 475px
+		padding-left: 75px
+	&__count
+		font-size: 144px
+		line-height: 168px
+		color: #BDBDBD
+		position: absolute
+		bottom: 19px
+		left: 75px
+
+	&__pagination
+		&.swiper-pagination
+			left: 75px
+			bottom: 162px
+			width: auto
+		
+
+	&__foot
+		margin-top: 42px
+		align-items: flex-end
+	&__order
+		margin-left: 75px
+		width: 330px
+	&__location
+		width: 355px
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: center
+		padding-bottom: 15px
+		margin-left: 630px
+		&-icon
+			margin-bottom: 30px
+		&-text
+			font-size: 36px
+			line-height: 42px
+			color: #4F4F4F
+		
+
+.desc
+	padding-top: 35px
+	padding-bottom: 35px
+	background: linear-gradient(287.52deg, #F3F8FC 24.4%, #E2E1DF 95.95%)
+	&__wrap
+		padding-left: 75px
+	&__imgs
+		position: relative
+		width: 618px
+		height: 545px
+	&__img
+		position: absolute
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&:nth-of-type(1)
+			top: 0
+			left: 0
+			width: 363px
+			height: 266px
+		&:nth-of-type(2)
+			top: 279px
+			left: 0
+			width: 363px
+			height: 266px
+		&:nth-of-type(3)
+			left: 377px
+			top: 0
+			width: 241px
+			height: 150px
+		&:nth-of-type(4)
+			left: 377px
+			top: 163px
+			width: 241px
+			height: 213px
+		&:nth-of-type(5)
+			left: 377px
+			top: 390px
+			width: 241px
+			height: 155px
+	&__content
+		width: calc(100% - 618px)
+		padding-top: 11px
+		padding-left: 140px
+		padding-right: 90px
+	&__title
+		margin-bottom: 38px
+	&__text
+		font-size: 24px
+		line-height: 46px
+		font-weight: 300
+		p
+			margin-bottom: 18px
+
+
+.team
+	padding-top: 50px
+	padding-bottom: 82px
+	&__title
+		text-align: center
+		margin-bottom: 95px
+	&__slider
+		position: relative
+		padding-left: 75px
+		padding-right: 75px
+	&__inner
+		position: relative
+	&__item
+		display: flex
+		flex-wrap: wrap
+	&__img
+		width: 354px
+		height: 354px
+		border-radius: 50%
+		overflow: hidden
+	&__content
+		width: calc(100% - 354px)
+		padding-left: 62px
+	&__name
+		margin-bottom: 11px
+	&__position
+		color: #4F4F4F
+		font-size: 24px
+		font-weight: 300
+		margin-bottom: 54px
+	&__text
+		font-size: 24px
+		font-weight: 300
+		line-height: 1.5
+		p
+			margin-bottom: 44px
+			&:last-of-type
+				margin-bottom: 0
+	&__desc
+		font-weight: 300
+		color: #4F4F4F
+		margin-top: 22px
+	&__pagination
+		position: relative
+		font-size: 0
+		margin-top: 90px
+	&__arrow
+		top: 50%
+		margin-top: -25px
+		&.--prev
+			left: -75px
+		&.--next
+			right: -75px
+			
+		
+.insta
+	padding-top: 92px
+	padding-bottom: 140px
+	background-color: #EFEEEF 
+	&__head
+		align-items: center
+		margin-bottom: 60px
+	&__link
+		margin-left: auto
+		align-items: center
+		&-icon
+			width: 56px
+		&-title
+			font-size: 24px
+			line-height: 36px
+			font-weight: 500
+			width: calc(100% - 56px)
+			padding-left: 21px
+			span
+				display: block
+				color: #4F4F4F
+				transition: .3s
+		&:hover
+			.insta__link-title
+				span
+					color: #000
+	&__list
+		font-size: 0
+	&__item
+		width: 20%
+
+
+.reviews
+	padding-top: 50px
+	padding-bottom: 50px
+	&__slider
+		position: relative
+		width: 100%
+		max-width: 1365px
+		padding-left: 90px
+		padding-right: 90px
+		margin-left: auto
+		margin-right: auto
+	&__title
+		text-align: center
+		margin-bottom: 40px
+
+	&__item
+		height: auto
+		padding: 30px
+	&__inner
+		padding: 54px 37px 31px
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		height: 100%
+		background: #F2F2F2
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25)
+	&__img
+		margin-bottom: 9px
+	&__name
+		margin-bottom: 18px
+	&__text
+		font-size: 14px
+		line-height: 27px
+	&__arrow
+		top: 50%
+		margin-top: -25px
+		&.--prev
+			left: 0
+		&.--next
+			right: 0
+			
+			
+
+.map
+	&__area
+		height: 610px
+
+	// .ymaps-2-1-78-layers-pane
+	// 	filter: brightness(38%)
+	// 	-ms-filter: brightness(38%)
+	// 	-webkit-filter: brightness(38%)
+	// 	-moz-filter: brightness(38%)
+	// 	-o-filter: brightness(38%)
+
+.footer
+	color: #fff
+	padding-top: 67px
+	padding-bottom: 26px
+	background: #232323
+	a
+		color: #fff
+	&__feedback
+		width: 365px
+	&__inner
+		width: calc(100% - 365px)
+		
+		

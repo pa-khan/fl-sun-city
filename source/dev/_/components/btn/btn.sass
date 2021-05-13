@@ -16,3 +16,27 @@
 	transition: .3s
 	outline: none
 	border-bottom: none
+	&.--noto
+		font-family: $noto
+	&.--xs
+		font-size: 18px
+		height: 46px
+	&.--md
+		font-size: 20px
+		height: 81px
+		font-weight: 700
+		letter-spacing: 0.125em
+	&.--bg-pink
+		color: #4F4F4F
+		background-color: #F7D2CC
+		box-shadow: 0px 4px 20px rgba(123, 123, 123, 0.25)
+		&:hover
+			background-color: lighten(#F7D2CC, 5%)
+			box-shadow: none
+		
+	&.--bg-black
+		color: #fff
+		background-color: #4F4F4F
+		&:hover
+			background-color: $black
+		

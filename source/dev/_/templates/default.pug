@@ -15,8 +15,14 @@ html(lang="ru")
 		title=title
 	body
 		.wrap
+			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+			
+			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+			<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 			link(rel="stylesheet" href="_/sys/css/style.css" + version)
-			script(src="_/sys/js/common.js" + version)
 
 			+style('header', 'blocks')
 			include ../blocks/header/header
@@ -29,9 +35,11 @@ html(lang="ru")
 			include ../blocks/footer/footer
 			
 			+script('input', 'components')
-			+script('check', 'components')
-			+script('select', 'components')
-			+script('tabs', 'components')
-			+script('popup', 'components')
-			+script('slider', 'components')
-			+script('tog', 'components')
+			// +script('check', 'components')
+			// +script('select', 'components')
+			// +script('tabs', 'components')
+			// +script('popup', 'components')
+			// +script('slider', 'components')
+			// +script('tog', 'components')
+
+			script(src="_/sys/js/common.js" + version)
