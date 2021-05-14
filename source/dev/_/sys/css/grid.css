@@ -10,6 +10,21 @@
   padding-left: 0;
   padding-right: 0;
 }
+@media screen and (max-width: 1720px) {
+  .case {
+    max-width: calc(1370px + 30px);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .case {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .case {
+    max-width: 960px;
+  }
+}
 
 .row {
   display: flex;

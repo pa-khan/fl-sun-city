@@ -4,6 +4,14 @@ var html = document.querySelector('html'),
 
 var mailPattern = /^[0-9a-z_-]+@[0-9a-z_-]+.[a-z]{2,5}$/i;
 
+var ham = document.querySelector('.header__ham'),
+		nav = document.querySelector('.header__nav');
+
+if (ham && nav) {
+	ham.addEventListener('click', ()=>{
+		nav.classList.toggle('--show');
+	});
+}
 
 
 var offer = document.querySelector('.offer__slider');
@@ -39,12 +47,22 @@ if (team) {
 var reviews = document.querySelector('.reviews__wrap');
 if (reviews) {
 	new Swiper(reviews, {
-		slidesPerView: 2,
+		slidesPerView: 1,
 		loop: true,
-		spaceBetween: 65,
 		navigation: {
 			prevEl: '.reviews__arrow.arrow.--prev',
 			nextEl: '.reviews__arrow.arrow.--next',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				spaceBetween: 20,
+			},
+			1170: {
+				spaceBetween: 65,
+			},
 		}
 	})
 }
@@ -76,6 +94,7 @@ if (map) {
 				iconImageOffset: [-16, -45],
 			});  
 			myMap.geoObjects.add(placemark);
+			myMap.behaviors.disable('scrollZoom');
 		}
 	}
 }

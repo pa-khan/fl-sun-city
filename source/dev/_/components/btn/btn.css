@@ -22,11 +22,24 @@
   font-size: 18px;
   height: 46px;
 }
+.btn.--sm {
+  font-weight: 500;
+  height: 62px;
+  letter-spacing: 0.125em;
+}
 .btn.--md {
   font-size: 20px;
   height: 81px;
   font-weight: 700;
   letter-spacing: 0.125em;
+}
+.btn.--b-white {
+  color: #E0E0E0;
+  border: 1px solid #E0E0E0;
+}
+.btn.--b-white:hover {
+  color: #333333;
+  background-color: #E0E0E0;
 }
 .btn.--bg-pink {
   color: #4F4F4F;
