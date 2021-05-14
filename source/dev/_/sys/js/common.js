@@ -47,13 +47,16 @@ if (team) {
 var reviews = document.querySelector('.reviews__wrap');
 if (reviews) {
 	new Swiper(reviews, {
-		slidesPerView: 1,
+		slidesPerView: 2,
 		loop: true,
 		navigation: {
 			prevEl: '.reviews__arrow.arrow.--prev',
 			nextEl: '.reviews__arrow.arrow.--next',
 		},
 		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
 			768: {
 				slidesPerView: 2,
 			},
@@ -79,7 +82,7 @@ if (map) {
 			[55.70294156904948,37.57025800000001]
 		]
 		let myMap = new ymaps.Map (map, {
-			center: [55.764525568969454,37.564562499999944],
+			center: [55.740565,37.566022],
 			zoom: 12,
 			controls: []
 			},{
@@ -89,12 +92,14 @@ if (map) {
 			let placemark = new ymaps.Placemark(positions[i],{}, {
 				hideIconOnBalloonOpen: false,
 				iconLayout: 'default#image',
-				iconImageHref: '/_/uploads/marker.png',
+				iconImageHref: '_/uploads/marker.png',
 				iconImageSize: [33, 45],
 				iconImageOffset: [-16, -45],
 			});  
 			myMap.geoObjects.add(placemark);
 			myMap.behaviors.disable('scrollZoom');
+			myMap.behaviors.disable('multiTouch'); 
+			myMap.behaviors.disable('drag');
 		}
 	}
 }

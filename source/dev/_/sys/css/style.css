@@ -90,6 +90,8 @@ path, circle, rect, line {
 .wrap {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 100%;
   overflow: hidden;
 }
@@ -319,6 +321,7 @@ path, circle, rect, line {
   font-family: "Noto Serif", sans-serif;
   width: calc(100% - 30px);
   padding-left: 10px;
+  white-space: nowrap;
 }
 
 .socials.--row li {
@@ -376,6 +379,13 @@ path, circle, rect, line {
 }
 .arrow:hover {
   background: rgba(0, 0, 0, 0.9);
+}
+
+.small {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 }
 
 .intro__aside {
@@ -540,6 +550,9 @@ path, circle, rect, line {
   border: 1px solid #fff;
   text-align: center;
 }
+.services__item.--nav {
+  display: none;
+}
 .services__item.--in-line {
   display: flex;
   align-items: center;
@@ -616,6 +629,12 @@ path, circle, rect, line {
   text-align: center;
   margin-bottom: 32px;
 }
+.services__subtitle a {
+  color: #fff;
+}
+.services__subtitle a:hover {
+  color: #333333;
+}
 .services__links ul {
   flex-direction: column;
   align-items: center;
@@ -654,6 +673,9 @@ path, circle, rect, line {
 }
 .services__links a:hover {
   color: #333333;
+}
+.services__img img {
+  object-position: bottom left;
 }
 
 .offer {
@@ -764,11 +786,15 @@ path, circle, rect, line {
 .desc__imgs {
   position: relative;
   width: 618px;
+  height: 545px;
 }
 .desc__img {
   position: absolute;
   cursor: pointer;
   overflow: hidden;
+}
+.desc__img-wrap {
+  display: none;
 }
 .desc__img img {
   width: 100%;
@@ -1003,10 +1029,12 @@ path, circle, rect, line {
 }
 .footer__feedback {
   width: 365px;
-  padding-top: 90px;
 }
 .footer__logo {
-  display: none;
+  display: block;
+  width: 260px;
+  margin-top: -20px;
+  margin-bottom: 60px;
 }
 .footer__socials a:hover .soc-hover {
   fill: #fff;
@@ -1046,6 +1074,9 @@ path, circle, rect, line {
 .contact {
   width: 250px;
   line-height: 21px;
+}
+.contact:last-of-type {
+  width: 185px;
 }
 .contact__name {
   color: #F7D2CC;
@@ -1452,6 +1483,10 @@ path, circle, rect, line {
   }
   .footer__feedback {
     width: 300px;
+  }
+  .footer__logo {
+    margin-top: 0;
+    margin-bottom: 30px;
   }
   .footer__btn {
     max-width: 220px;
@@ -1958,6 +1993,11 @@ path, circle, rect, line {
   .header__nav li {
     margin-left: auto;
     margin-right: auto;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .header__nav li:last-of-type {
+    margin-bottom: 0;
   }
   .header__nav a:after {
     display: none;
@@ -2010,7 +2050,7 @@ path, circle, rect, line {
     left: 15px;
   }
   .intro__img img {
-    object-position: 60% center;
+    object-position: 71% center;
   }
 
   .apps__img {
@@ -2068,10 +2108,25 @@ path, circle, rect, line {
   .services__img img {
     object-position: bottom left;
   }
+  .services__item {
+    color: #fff;
+    border: none;
+    background-color: #313130;
+  }
+  .services__item svg path {
+    fill: #fff;
+  }
+  .services__item a {
+    color: #fff !important;
+  }
 
   .arrow {
     width: 34px;
     height: 34px;
+  }
+
+  .links__item {
+    width: 100% !important;
   }
 
   .offer {
@@ -2150,6 +2205,13 @@ path, circle, rect, line {
   .desc__imgs {
     width: 100%;
     max-width: 618px;
+    height: auto;
+  }
+  .desc__img {
+    display: none;
+  }
+  .desc__img-wrap {
+    display: block;
   }
 
   .team {
@@ -2244,18 +2306,24 @@ path, circle, rect, line {
     line-height: 18px;
   }
 
-  .map__area {
-    height: 200px;
-  }
-
   .footer {
     padding-top: 30px;
+  }
+  .footer__logo {
+    margin-bottom: 0;
   }
   .footer__nav {
     display: none;
   }
   .footer__contacts {
-    display: none;
+    padding-top: 30px;
+    margin-bottom: -20px;
+  }
+  .footer__contact {
+    width: 50% !important;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 20px;
   }
   .footer__feedback {
     flex-direction: column;
@@ -2270,11 +2338,13 @@ path, circle, rect, line {
     margin-top: 25px;
     margin-bottom: 20px;
   }
-  .footer__inner {
-    display: none;
-  }
   .footer__copy {
     margin-top: 35px;
+  }
+
+  .contact__name {
+    margin-bottom: 8px;
+    max-width: 100px;
   }
 
   .swiper-pagination-bullets.swiper-pagination .swiper-pagination-bullet {
@@ -2284,5 +2354,20 @@ path, circle, rect, line {
   }
   .swiper-pagination-bullets.swiper-pagination .swiper-pagination-bullet:last-of-type {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  .modal.--md {
+    padding: 30px;
+  }
+
+  .address__item {
+    width: 100%;
+  }
+  .address__img {
+    height: 200px;
+  }
+  .address__name {
+    font-size: 18px;
   }
 }
