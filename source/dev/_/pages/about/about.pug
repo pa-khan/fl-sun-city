@@ -1,10 +1,158 @@
 extends ../../templates/default
 block vars
 	-
-		title = ""
+		title = "О нас"
 		breadcrumbs = [
 			['Главная', 'index.html'],
 			[title]
 		]
 block content
-	
+	.page-head
+		.case
+			.page__wrap
+				+breadcrumbs
+
+
+	.viner
+		.case
+			.viner__title.h1 О нас
+		.viner__inner
+			.case
+				.viner__wrap.row
+					.viner__img
+						img(src="_/uploads/viner.jpg" alt="")
+
+					.viner__content
+						.viner__name.h2 ЮЛИАННА ВИНЕР
+						.viner__subtitle
+							p Создатель и владелица сети #[br]Лабораторий Красоты SUN&CITY
+						.viner__text
+							p Меня зовут Юлианна Винер. В 1999 году я создала первый солярий-клуб SUN&CITY. Мой салон стал первооткрывателем качественного загара в Москве. Сейчас на его базе открыты пять салонов с обширным спектром услуг. Я лично собрала обширную команду лучших профессионалов своего дела. Врачи-косметологи и эстетисты, стилисты высшей категории, мастера ногтевого сервиса со стажем не менее пяти лет, специалисты по массажу и коррекции фигуры неустанно трудятся на благо наших клиентов в Москве.
+
+	.advantages
+		.case
+			.advantages__list.row
+				.advantages__item
+					.advantages__icon
+						img(src="_/uploads/medal.svg" alt="")
+					.advantages__text Премиальное #[br]оборудование для загара
+				.advantages__item
+					.advantages__icon
+						img(src="_/uploads/like.svg" alt="")
+					.advantages__text Официальный представитель в России немецкой компании Mega Sun
+				.advantages__item
+					.advantages__icon
+						img(src="_/uploads/lamp.svg" alt="")
+					.advantages__text Инновационные #[br]технологии в работе
+
+	.photos
+		.case
+			.photos__list.row
+				.photos__item
+					img(src="_/uploads/photo-1.jpg" alt="")
+				.photos__item
+					img(src="_/uploads/photo-2.jpg" alt="")
+				.photos__item
+					img(src="_/uploads/photo-3.jpg" alt="")
+
+	.clients
+		.case
+			.clients__title.h1 Нам доверяют
+			.clients__wrap
+				.clients__slider.swiper-container
+					.clients__list.swiper-wrapper
+						.clients__item.swiper-slide
+							.clients__img
+								img(src="_/uploads/client-1.jpg" alt="")
+							.clients__name Иван Иванов
+							.clients__position Актер
+						.clients__item.swiper-slide
+							.clients__img
+								img(src="_/uploads/client-2.jpg" alt="")
+							.clients__name Иван Иванов
+							.clients__position Актер
+						.clients__item.swiper-slide
+							.clients__img
+								img(src="_/uploads/client-3.jpg" alt="")
+							.clients__name Иван Иванов
+							.clients__position Актер
+						.clients__item.swiper-slide
+							.clients__img
+								img(src="_/uploads/client-1.jpg" alt="")
+							.clients__name Иван Иванов
+							.clients__position Актер
+						.clients__item.swiper-slide
+							.clients__img
+								img(src="_/uploads/client-2.jpg" alt="")
+							.clients__name Иван Иванов
+							.clients__position Актер
+						.clients__item.swiper-slide
+							.clients__img
+								img(src="_/uploads/client-3.jpg" alt="")
+							.clients__name Иван Иванов
+							.clients__position Актер
+				.clients__arrows
+					.clients__arrow.arrow.--prev
+						<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.11125 -3.88485e-08L1.49002e-07 7.5L7.11125 15L8 14.0627L1.7775 7.5L8 0.937335L7.11125 -3.88485e-08Z" fill="white"/></svg>
+					.clients__arrow.arrow.--next
+						<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.88875 -3.88485e-08L8 7.5L0.888751 15L6.14699e-07 14.0627L6.2225 7.5L4.09722e-08 0.937335L0.88875 -3.88485e-08Z" fill="white"/></svg>
+
+
+	.counts
+		.case
+			.counts__title.h1 Наши достижения
+			.couts__wrap
+				.counts__list.row
+					.counts__item
+						.counts__value #[u 20 лет]
+						.counts__text на Beauty рынке
+					.counts__item
+						.counts__value #[u №1]
+						.counts__text эксперт в России #[br]в области загара
+					.counts__item
+						.counts__value #[u 7200] человек
+						.counts__text обслуживаем ежемесячно
+					.counts__item
+					.counts__item
+					.counts__item
+			.counts__video
+				<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+	.write
+		.case
+			.write__title.h1 О нас пишут
+			.write__wrap
+				.write__slider.swiper-container
+					.write__list.swiper-wrapper
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+						a.write__item.swiper-slide(href="")
+							img(src="_/uploads/the-world.png" alt="")
+				.write__arrows
+					.write__arrow.arrow.--prev
+						<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.11125 -3.88485e-08L1.49002e-07 7.5L7.11125 15L8 14.0627L1.7775 7.5L8 0.937335L7.11125 -3.88485e-08Z" fill="white"/></svg>
+					.write__arrow.arrow.--next
+						<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.88875 -3.88485e-08L8 7.5L0.888751 15L6.14699e-07 14.0627L6.2225 7.5L4.09722e-08 0.937335L0.88875 -3.88485e-08Z" fill="white"/></svg>
+
+
+	include ../../parts/insta
+
+	include ../../parts/map
+

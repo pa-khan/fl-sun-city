@@ -70,6 +70,62 @@ if (reviews) {
 	})
 }
 
+var clients = document.querySelector('.clients__slider');
+if (clients) {
+	new Swiper(clients, {
+		slidesPerView: 5,
+		loop: true,
+		navigation: {
+			prevEl: '.clients__arrow.arrow.--prev',
+			nextEl: '.clients__arrow.arrow.--next',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			1170: {
+				spaceBetween: 20,
+			},
+		}
+	})
+}
+
+var write = document.querySelector('.write__slider');
+if (write) {
+	new Swiper(write, {
+		slidesPerView: 3,
+		slidesPerColumn: 2,
+		loop: true,
+		loopAdditionalSlides: 15,
+		navigation: {
+			prevEl: '.write__arrow.arrow.--prev',
+			nextEl: '.write__arrow.arrow.--next',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				slidesPerColumn: 2,
+			},
+			768: {
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+			},
+			1170: {
+				// spaceBetween: 20,
+			},
+		}
+	})
+}
+
 var map = document.getElementById('map');
 if (map) {
 	ymaps.ready(initMap);
