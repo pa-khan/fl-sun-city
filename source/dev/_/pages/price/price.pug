@@ -1,0 +1,96 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Услуги и цены"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	.page-head
+		.case
+			.page__wrap
+				+breadcrumbs
+				.page-head__title.h1 Услуги и цены
+				.page-head__logo
+					img(src="_/uploads/logo-black.png " alt="")
+	
+	.price
+		.case
+			.price__title ПРАЙС
+			.price__wrap.tabs
+				.price__nav.t-nav.tabs-links
+					a.t-nav__item.tabs-link(href="#address-1" data-name="КОСЫГИНА" data-href="https://widget.universe-soft.ru/v2/minisite/15a6501c14b00530f6951ed082b52109") SUN & CITY — КОСЫГИНА
+					a.t-nav__item.tabs-link(href="#address-2" data-name="ПРЕСНЕНСКИЙ ВАЛ" data-href="https://widget.universe-soft.ru/v2/minisite/9e04e5a904f4b25c4d45e77676ba6924") SUN & CITY — ПРЕСНЕНСКИЙ ВАЛ
+					a.t-nav__item.tabs-link(href="#address-3" data-name="ФРУНЗЕНСКАЯ" data-href="https://widget.universe-soft.ru/v2/minisite/4f73feff38d35b75412995bf6ac70045") SUN & CITY — ФРУНЗЕНСКАЯ
+					a.t-nav__item.tabs-link(href="#address-4" data-name="ТРЦ АФИМОЛЛ СИТИ" data-href="https://widget.universe-soft.ru/v2/minisite/51c227e11826e9c51abb618f29c0f184") SUN & CITY — ТРЦ АФИМОЛЛ СИТИ
+				.price__inner
+					.price__head
+						.price__head-col Услуга
+						.price__head-col Стоимость
+					.price__tabs
+						mixin tab(id)
+							.price__tab.tabs-item(id=id)
+								.price__body
+									.price__list
+										mixin priceItem(title, show)
+											.price__item.tog(class=show?'--open':null)
+												.tog__head
+													.tog__icon
+													.tog__title= title
+												.tog__body
+													table
+														tbody
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+													p Чип карты для загара с выгодной системой скидок
+													table
+														tbody
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+															tr
+																td MegaSun T200
+																td 66 руб / минута
+										+priceItem('Солярий')
+										+priceItem('Аппаратная косметология')
+										+priceItem('Врачебная косметология')
+										+priceItem('Эстетическая косметология')
+										+priceItem('Парикмахерский зал')
+										+priceItem('Визаж')
+										+priceItem('Маникюрный кабинет')
+										+priceItem('Массаж')
+									.price__img
+										img(src="_/uploads/price-img.jpg" alt="")
+						+tab('address-1')
+						+tab('address-2')
+						+tab('address-3')
+						+tab('address-4')
+
+
+	include ../../parts/order
+	
+	include ../../parts/map
+

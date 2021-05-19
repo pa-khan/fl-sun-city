@@ -1,0 +1,68 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Галерея"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	.page-head
+		.case
+			.page__wrap
+				+breadcrumbs
+				.page-head__title.h1 Галерея
+				.page-head__logo
+					img(src="_/uploads/logo-black.png " alt="")
+	
+	.gallery.tabs
+		.case
+			.gallery__nav.tabs-links
+				a.gallery__nav-item.tabs-link(href="#gallery-photo") Фото
+				a.gallery__nav-item.tabs-link(href="#gallery-video") Видео
+			.gallery__tabs
+				.gallery__tab.tabs-item#gallery-photo
+					.gallery__list
+						mixin photos(name)
+							.gallery__item
+								.gallery__name= name
+								.gallery__slider.g-sli
+									.g-sli__slider.swiper-container
+										.g-sli__list.swiper-wrapper
+											a.g-sli__item.swiper-slide(href="_/uploads/photo-1.jpg" data-fancybox="")
+												img(src="_/uploads/photo-1.jpg" alt="")
+											a.g-sli__item.swiper-slide(href="_/uploads/photo-2.jpg" data-fancybox="")
+												img(src="_/uploads/photo-2.jpg" alt="")
+											a.g-sli__item.swiper-slide(href="_/uploads/photo-3.jpg" data-fancybox="")
+												img(src="_/uploads/photo-3.jpg" alt="")
+											a.g-sli__item.swiper-slide(href="_/uploads/photo-1.jpg" data-fancybox="")
+												img(src="_/uploads/photo-1.jpg" alt="")
+											a.g-sli__item.swiper-slide(href="_/uploads/photo-2.jpg" data-fancybox="")
+												img(src="_/uploads/photo-2.jpg" alt="")
+									.g-sli__arrows
+										.g-sli__arrow.arrow.--prev
+											<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.11125 -3.88485e-08L1.49002e-07 7.5L7.11125 15L8 14.0627L1.7775 7.5L8 0.937335L7.11125 -3.88485e-08Z" fill="white"/></svg>
+										.g-sli__arrow.arrow.--next
+											<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.88875 -3.88485e-08L8 7.5L0.888751 15L6.14699e-07 14.0627L6.2225 7.5L4.09722e-08 0.937335L0.88875 -3.88485e-08Z" fill="white"/></svg>
+						+photos('НАШИ СОЛЯРИИ')
+						+photos('ЛАБОРАТОРИЯ КОСМЕТОЛОГИИ')
+						+photos('ПАРИКМАХЕРСКИЕ ЗАЛЫ')
+						+photos('МАССАЖНЫЕ КАБИНЕТЫ')
+						+photos('НАШИ ПОСТОЯННЫЕ ГОСТИ')
+				.gallery__tab.tabs-item#gallery-video
+					.gallery__list
+						mixin videos(name)
+							.gallery__item
+								.gallery__name= name
+								.gallery__videos.videos
+									.videos__item
+										<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									.videos__item
+										<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									.videos__item
+										<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						+videos('НАШИ СОЛЯРИИ')
+						+videos('ЛАБОРАТОРИЯ КОСМЕТОЛОГИИ')
+						+videos('ПАРИКМАХЕРСКИЕ ЗАЛЫ')
+						+videos('МАССАЖНЫЕ КАБИНЕТЫ')
+						+videos('НАШИ ПОСТОЯННЫЕ ГОСТИ')

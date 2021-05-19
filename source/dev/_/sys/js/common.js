@@ -126,6 +126,71 @@ if (write) {
 	})
 }
 
+var discounts = document.querySelectorAll('.discounts__sli');
+if (discounts.length > 0) {
+	discounts.forEach((discount)=>{
+		console.log(discount)
+		var slider    = discount.querySelector('.di__slider'), 
+				arrowPrev = discount.querySelector('.di__arrow.arrow.--prev'),
+				arrowNext = discount.querySelector('.di__arrow.arrow.--next');
+		new Swiper(slider, {
+			slidesPerView: 3,
+			loop: true,
+			loopAdditionalSlides: 3,
+			navigation: {
+				prevEl: arrowPrev,
+				nextEl: arrowNext,
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1440: {
+					// spaceBetween: 20,
+					slidesPerView: 3,
+				},
+			}
+		})
+	})
+}
+
+
+var gallery = document.querySelectorAll('.gallery__slider');
+if (gallery.length > 0) {
+	gallery.forEach((discount)=>{
+		console.log(discount)
+		var slider    = discount.querySelector('.g-sli__slider'), 
+				arrowPrev = discount.querySelector('.g-sli__arrow.arrow.--prev'),
+				arrowNext = discount.querySelector('.g-sli__arrow.arrow.--next');
+		new Swiper(slider, {
+			slidesPerView: 4,
+			loop: true,
+			loopAdditionalSlides: 3,
+			navigation: {
+				prevEl: arrowPrev,
+				nextEl: arrowNext,
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1440: {
+					// spaceBetween: 20,
+					slidesPerView: 4,
+					spaceBetween: 30
+				},
+			}
+		})
+	})
+}
+
+
 var map = document.getElementById('map');
 if (map) {
 	ymaps.ready(initMap);
@@ -159,3 +224,59 @@ if (map) {
 		}
 	}
 }
+
+// togs
+
+var togs = $('.tog');
+
+togs.each((i, tog)=>{
+	var tog  = $(tog),
+			head = tog.find('.tog__head'),
+			body = tog.find('.tog__body');
+
+	head.on('click', function(event) {
+		body.slideToggle(300);
+		tog.toggleClass('--open');
+	});
+
+	if (tog.hasClass('--open')) {
+		body.slideDown(300);
+	}
+	
+});
+
+
+var tabsLinks = $('.t-nav__item'),
+		orderCity = $('.order__city'),
+		orderBtn  = $('.order__btn');
+tabsLinks.each((i, link)=>{
+	link = $(link);
+	var name = link.attr('data-name'),
+			href = link.attr('data-href');
+
+	if (link.hasClass('--current')) {
+		orderCity.text(name);
+		orderBtn.attr('href', href);
+	}
+	link.on('click', function(event) {
+		orderCity.text(name);
+		orderBtn.attr('href', href);	
+	});
+
+});
+
+
+var priceTabs = $('.price__tab');
+priceTabs.each((i, tab)=>{
+	tab = $(tab);
+	var item = tab.find('.price__item .tog__head'),
+			body = tab.find('.price__body');
+
+	item.on('click', ()=>{
+		if (tab.find('.price__item.--open').length>0) {
+			body.addClass('--no-img');
+		} else {
+			body.removeClass('--no-img');
+		}
+	})
+});

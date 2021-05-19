@@ -1,0 +1,86 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Акции"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	.page-head
+		.case
+			.page__wrap
+				+breadcrumbs
+				.page-head__title.h1 Акции
+				.page-head__logo
+					img(src="_/uploads/logo-black.png " alt="")
+	
+	.discounts
+		.case
+			.discounts__wrap.tabs
+				.discounts__nav.t-nav.tabs-links
+					a.t-nav__item.tabs-link(href="#address-1" data-name="КОСЫГИНА" data-href="https://widget.universe-soft.ru/v2/minisite/15a6501c14b00530f6951ed082b52109") SUN & CITY — КОСЫГИНА
+					a.t-nav__item.tabs-link(href="#address-2" data-name="ПРЕСНЕНСКИЙ ВАЛ" data-href="https://widget.universe-soft.ru/v2/minisite/9e04e5a904f4b25c4d45e77676ba6924") SUN & CITY — ПРЕСНЕНСКИЙ ВАЛ
+					a.t-nav__item.tabs-link(href="#address-3" data-name="ФРУНЗЕНСКАЯ" data-href="https://widget.universe-soft.ru/v2/minisite/4f73feff38d35b75412995bf6ac70045") SUN & CITY — ФРУНЗЕНСКАЯ
+					a.t-nav__item.tabs-link(href="#address-4" data-name="ТРЦ АФИМОЛЛ СИТИ" data-href="https://widget.universe-soft.ru/v2/minisite/51c227e11826e9c51abb618f29c0f184") SUN & CITY — ТРЦ АФИМОЛЛ СИТИ
+				.discounts__inner
+					.discounts__tabs
+						mixin tab(id)
+							.discounts__tab.tabs-item(id=id)
+								.discounts__list
+									.discounts__item
+										.discounts__date.h2 Апрель 2021
+										.discounts__sli.di
+											.di__slider.swiper-container
+												.di__list.swiper-wrapper
+													.di__item.swiper-slide
+														.di__item-wrap
+															.di__img
+																img(src="_/uploads/discount-1.jpg" alt="")
+															.di__name Ампульный уход для волос Kevin Murphy
+															.di__data.row
+																.di__percent -50%
+																.di__price
+																	.di__price-old 3300 руб
+																	.di__price-new 1650 руб
+													.di__item.swiper-slide
+														.di__item-wrap
+															.di__img
+																img(src="_/uploads/discount-2.jpg" alt="")
+															.di__name Эндосфера
+															.di__data.row
+																.di__price
+																	.di__price-old 3300 руб
+																	.di__price-new 1650 руб
+													.di__item.swiper-slide
+														.di__item-wrap
+															.di__img
+																img(src="_/uploads/discount-3.jpg" alt="")
+															.di__name Курс 10 процедур LPG массажа
+															.di__data.row
+																.di__price
+																	.di__price-old 3300 руб
+																	.di__price-new 1650 руб
+													.di__item.swiper-slide
+														.di__item-wrap
+															.di__img
+																img(src="_/uploads/discount-2.jpg" alt="")
+															.di__name Эндосфера
+															.di__data.row
+																.di__percent -50%
+																.di__price
+																	.di__price-old 3300 руб
+																	.di__price-new 1650 руб
+											.di__arrows
+												.di__arrow.arrow.--prev
+													<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.11125 -3.88485e-08L1.49002e-07 7.5L7.11125 15L8 14.0627L1.7775 7.5L8 0.937335L7.11125 -3.88485e-08Z" fill="white"/></svg>
+												.di__arrow.arrow.--next
+													<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.88875 -3.88485e-08L8 7.5L0.888751 15L6.14699e-07 14.0627L6.2225 7.5L4.09722e-08 0.937335L0.88875 -3.88485e-08Z" fill="white"/></svg>
+						+tab('address-1')
+						+tab('address-2')
+						+tab('address-3')
+						+tab('address-4')
+
+	include ../../parts/order
+	
+	include ../../parts/map
