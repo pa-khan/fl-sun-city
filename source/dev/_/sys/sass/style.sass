@@ -1869,6 +1869,112 @@
 			height: 100%
 			object-fit: cover
 
+.land
+	&__info
+		padding-top: 50px
+		padding-bottom: 50px
+		
+		&-item
+			margin-bottom: 90px
+
+			&:last-of-type
+				margin-bottom: 0
+		&-media
+			display: inline-block
+			position: relative
+			img
+				border-radius: 60px
+				overflow: hidden
+			&.--img-1, &.--img-2
+				&:before
+					z-index: -1
+					position: absolute
+					content: ""
+					background: #DED4CB
+					border-radius: 60px
+					width: 100%
+					height: 100%
+			&.--img-1
+				&:before
+					bottom: -32px
+					left: -18px
+			&.--img-2
+				&:before
+					top: -26px
+					right: -20px
+
+		&-title
+			font-size: 18px
+			font-weight: 700
+			line-height: 21px
+			margin-bottom: 25px
+		&-text
+			font-size: 14px
+			font-weight: 500
+			line-height: 27px
+			color: #4F4F4F
+			ul
+				flex-direction: column
+				li
+					padding-left: 21px
+					margin-bottom: 10px
+					position: relative
+					&:before
+						position: absolute
+						content: ""
+						top: 8px
+						left: 0
+						background: $black
+						border-radius: 50%
+						width: 10px
+						height: 10px
+					&:last-of-type
+						margin-bottom: 0
+
+	&__gift
+		img
+			object-fit: cover
+			object-position: center
+			width: 100%
+			height: 100%
+
+.video
+	cursor: pointer
+	transition: .3s
+	position: relative
+	&__img
+		position: relative
+		width: 321px
+		height: 195px
+		&:after
+			position: absolute
+			content: ""
+			background: rgba(51, 51, 51, 0.6)
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+	&__play
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 37px
+		height: 37px
+		background: #232323
+		border-radius: 50%
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: .3s
+		svg
+			position: relative
+			left: 2px
+		&:hover
+			background: #F7D2CC
+			svg
+				path
+					fill: #232323
 
 @media screen and (max-width: 1800px)
 	.intro
@@ -2004,7 +2110,6 @@
 			width: calc(50% - 15px)
 			margin-bottom: 30px
 			
-
 @media screen and (max-width: 1440px)
 	.btn
 		&.--xs
