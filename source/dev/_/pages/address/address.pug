@@ -1,0 +1,232 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Адреса"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	.page-head
+		.case
+			.page__wrap
+				+breadcrumbs
+				.page-head__title.h1 Адреса
+				.page-head__logo
+					img(src="_/uploads/logo-black.png " alt="")
+	
+	.addr
+		.case
+			.addr__wrap.tabs
+				.addr__nav.t-nav.tabs-links
+					a.t-nav__item.tabs-link(href="#address-1" data-name="КОСЫГИНА" data-href="https://widget.universe-soft.ru/v2/minisite/15a6501c14b00530f6951ed082b52109") SUN & CITY — КОСЫГИНА
+					a.t-nav__item.tabs-link(href="#address-2" data-name="ПРЕСНЕНСКИЙ ВАЛ" data-href="https://widget.universe-soft.ru/v2/minisite/9e04e5a904f4b25c4d45e77676ba6924") SUN & CITY — ПРЕСНЕНСКИЙ  ВАЛ
+					a.t-nav__item.tabs-link(href="#address-3" data-name="ФРУНЗЕНСКАЯ" data-href="https://widget.universe-soft.ru/v2/minisite/4f73feff38d35b75412995bf6ac70045") SUN & CITY — ФРУНЗЕНСКАЯ
+					a.t-nav__item.tabs-link(href="#address-4" data-name="ТРЦ АФИМОЛЛ СИТИ" data-href="https://widget.universe-soft.ru/v2/minisite/51c227e11826e9c51abb618f29c0f184") SUN & CITY — ТРЦ АФИМОЛЛ СИТИ
+				.addr__inner
+					.addr__tabs
+						.addr__tab.tabs-item.row#address-1
+							.addr__contacts
+								.addr__list.row
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/placemark.svg" alt="")
+											.addr__value ул. Косыгина, д. 5
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+74991376918") +7 (499) 137-69-18]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/metro.svg" alt="")
+											.addr__value.m
+												.m__item
+													.m__color(style="background-color: rgb(245, 130, 32);")
+													.m__name Ленинский проспект
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/email.svg" alt="")
+											.addr__value #[a(href="mailto:sunicity@inbox.ru") sunicity@inbox.ru]
+									.addr__item.--full
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/time.svg" alt="")
+											.addr__value Салон: с 10:00 до 22:00
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/upload.svg" alt="")
+											.addr__value.--sm #[a(href="_/uploads/rekvizity-primaintrade.jpg" data-fancybox="") Скачать реквизиты]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/profile.svg" alt="")
+											.addr__value.--sm Руководитель: #[strong Виктория Вахромеева]
+								a.addr__btn.btn.--md.--bg-pink(href="https://widget.universe-soft.ru/v2/minisite/15a6501c14b00530f6951ed082b52109" target="_blank") Записаться онлайн   
+							.addr__img
+								img(src="_/uploads/address-sample.jpg" alt="")
+						.addr__tab.tabs-item.row#address-2
+							.addr__contacts
+								.addr__list.row
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/placemark.svg" alt="")
+											.addr__value Пресненский Вал, д. 6 с. 2
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+74992538787") +7 (499) 253-87-87]
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+79256652432 ") +7 (925) 665-24-32 ]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/metro.svg" alt="")
+											.addr__value.m
+												.m__item
+													.m__color(style="background-color: rgb(142, 71, 155);")
+													.m__name Улица 1905 года
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/email.svg" alt="")
+											.addr__value #[a(href="mailto:sunicity@inbox.ru") sunicity@inbox.ru]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/time.svg" alt="")
+											.addr__value Солярий: 10:00 — 00:00 
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/time.svg" alt="")
+											.addr__value Салон: 10:00 — 22:00
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/upload.svg" alt="")
+											.addr__value.--sm #[a(href="_/uploads/rekv-presnya.png" data-fancybox="") Скачать реквизиты]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/profile.svg" alt="")
+											.addr__value.--sm Руководитель: #[strong Виктория Вахромеева]
+								a.addr__btn.btn.--md.--bg-pink(href="https://widget.universe-soft.ru/v2/minisite/9e04e5a904f4b25c4d45e77676ba6924" target="_blank") Записаться онлайн   
+							.addr__img
+								img(src="_/uploads/address-sample.jpg" alt="")
+
+						.addr__tab.tabs-item.row#address-3
+							.addr__contacts
+								.addr__list.row
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/placemark.svg" alt="")
+											.addr__value ул. Фрунзенская 1-я, 8 
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+74992428307") +7 (499) 242-83-07]
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+79257555969") +7 (925) 755-59-69]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/metro.svg" alt="")
+											.addr__value.m
+												.m__item
+													.m__color(style="background-color: rgb(218, 33, 40);")
+													.m__name Фрунзенская
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/email.svg" alt="")
+											.addr__value #[a(href="mailto:sunicity@inbox.ru") sunicity@inbox.ru]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/time.svg" alt="")
+											.addr__value Солярий: 10:00 — 23:00 
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/time.svg" alt="")
+											.addr__value Салон: 10:00 — 22:00
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/upload.svg" alt="")
+											.addr__value.--sm #[a(href="_/uploads/rekv-frunza.png" data-fancybox="") Скачать реквизиты]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/profile.svg" alt="")
+											.addr__value.--sm Руководитель: #[strong Виктория Вахромеева]
+								a.addr__btn.btn.--md.--bg-pink(href="https://widget.universe-soft.ru/v2/minisite/4f73feff38d35b75412995bf6ac70045" target="_blank") Записаться онлайн   
+							.addr__img
+								img(src="_/uploads/address-sample.jpg" alt="")
+						.addr__tab.tabs-item.row#address-4
+							.addr__contacts
+								.addr__list.row
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/placemark.svg" alt="")
+											.addr__value Пресненская набережная, 2, 1 этаж, пав. А16
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+79269358787") +7 (926) 935-87-87]
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/phone.svg" alt="")
+											.addr__value #[a(href="tel:+79647808780") +7 (964) 780-87-80]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/metro.svg" alt="")
+											.addr__value.m
+												.m__item
+													.m__color(style="background-color: rgb(0, 193, 243);")
+													.m__name Выставочная
+												.m__item
+													.m__color(style="background-color: rgb(255, 198, 26);")
+													.m__name Деловой Центр
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/email.svg" alt="")
+											.addr__value #[a(href="mailto:sunicity@inbox.ru") sunicity@inbox.ru]
+									.addr__item.--full
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/time.svg" alt="")
+											.addr__value Пн. — Чт., Вск.: 10:00 — 22:00 #[br] Пт., Сб.: 10:00 — 23:00
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/upload.svg" alt="")
+											.addr__value.--sm #[a(href="_/uploads/rekv-afimoll.png" data-fancybox="") Скачать реквизиты]
+									.addr__item
+										.addr__item-wrap
+											.addr__icon
+												img(src="_/uploads/profile.svg" alt="")
+											.addr__value.--sm Руководитель: #[strong Виктория Вахромеева]
+								a.addr__btn.btn.--md.--bg-pink(href="https://widget.universe-soft.ru/v2/minisite/51c227e11826e9c51abb618f29c0f184" target="_blank") Записаться онлайн   
+							.addr__img
+								img(src="_/uploads/address-sample.jpg" alt="")
+
+	- orderClass = '--hidden-mob'
+	include ../../parts/order

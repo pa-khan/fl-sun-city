@@ -1,0 +1,26 @@
+extends ../../templates/default
+block vars
+	-
+		title = ""
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+		header = false
+block content
+	.land
+		.land__gray
+			.land__contacts
+				.land__logo
+				.land__phone
+				.land__socials.socials
+			.land__about.l-about
+				.case
+					.l-about__title
+					.l-about__subtitle
+					.l-about__text
+						p
+						p
+					a.l-about__btn.--md.--bg-pink(href="")
+					.l-about__logos
+				.l-about__img

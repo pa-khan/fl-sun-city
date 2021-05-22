@@ -24,9 +24,10 @@ html(lang="ru")
 			<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 			link(rel="stylesheet" href="_/sys/css/style.css" + version)
 
-			+style('header', 'blocks')
-			include ../blocks/header/header
-			+script('header', 'blocks')
+			if header
+				+style('header', 'blocks')
+				include ../blocks/header/header
+				+script('header', 'blocks')
 			
 			main.main
 				block content
