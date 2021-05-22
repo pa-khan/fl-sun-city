@@ -29,7 +29,7 @@ html(lang="ru")
 				include ../blocks/header/header
 				+script('header', 'blocks')
 			
-			main.main
+			main.main(class=header?null:'--full')
 				block content
 
 			+style('footer', 'blocks')
