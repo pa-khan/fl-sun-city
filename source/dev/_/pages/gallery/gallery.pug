@@ -54,13 +54,24 @@ block content
 						mixin videos(name)
 							.gallery__item
 								.gallery__name= name
-								.gallery__videos.videos
-									.videos__item
-										<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									.videos__item
-										<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									.videos__item
-										<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								.gallery__slider.g-sli
+									.g-sli__slider.swiper-container
+										.g-sli__list.swiper-wrapper
+											.g-sli__item.swiper-slide
+												<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											.g-sli__item.swiper-slide
+												<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											.g-sli__item.swiper-slide
+												<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											.g-sli__item.swiper-slide
+												<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											.g-sli__item.swiper-slide
+												<iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									.g-sli__arrows
+										.g-sli__arrow.arrow.--prev
+											<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.11125 -3.88485e-08L1.49002e-07 7.5L7.11125 15L8 14.0627L1.7775 7.5L8 0.937335L7.11125 -3.88485e-08Z" fill="white"/></svg>
+										.g-sli__arrow.arrow.--next
+											<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.88875 -3.88485e-08L8 7.5L0.888751 15L6.14699e-07 14.0627L6.2225 7.5L4.09722e-08 0.937335L0.88875 -3.88485e-08Z" fill="white"/></svg>
 						+videos('НАШИ СОЛЯРИИ')
 						+videos('ЛАБОРАТОРИЯ КОСМЕТОЛОГИИ')
 						+videos('ПАРИКМАХЕРСКИЕ ЗАЛЫ')

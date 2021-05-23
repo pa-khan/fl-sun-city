@@ -1192,6 +1192,10 @@ path, circle, rect, line {
   height: 100%;
   object-fit: cover;
 }
+.g-sli__item iframe {
+  width: 100%;
+  height: 100%;
+}
 
 .videos {
   display: flex;
@@ -2831,6 +2835,13 @@ path, circle, rect, line {
     display: none;
   }
 
+  .service__content {
+    width: calc(100% - 650px);
+  }
+  .service__img {
+    width: 625px;
+  }
+
   .guarantee__content {
     padding-right: 0;
     padding-left: 100px;
@@ -3257,6 +3268,13 @@ path, circle, rect, line {
   .guarantee__btn {
     margin-top: 15px;
     max-width: 280px;
+  }
+
+  .service__content {
+    width: calc(100% - 430px);
+  }
+  .service__img {
+    width: 400px;
   }
 
   .footer {
@@ -3824,6 +3842,23 @@ path, circle, rect, line {
   .guarantee__title {
     font-size: 24px;
     line-height: 32px;
+  }
+
+  .service__tab {
+    display: flex;
+    flex-direction: column;
+  }
+  .service__content {
+    order: 1;
+    width: 100%;
+  }
+  .service__img {
+    order: 2;
+    width: 100%;
+    height: auto;
+  }
+  .service__img img {
+    height: auto;
   }
 
   .footer__feedback {
@@ -4612,7 +4647,10 @@ path, circle, rect, line {
     font-size: 18px;
   }
   .addr__img {
-    display: none;
+    margin-top: 40px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
   }
   .addr__btn {
     display: none;
@@ -4895,6 +4933,15 @@ path, circle, rect, line {
     display: none;
   }
 
+  .land__gift {
+    margin-left: -52%;
+    margin-right: -20%;
+  }
+
+  .g-sli__item {
+    height: 380px;
+  }
+
   .swiper-pagination-bullets.swiper-pagination .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
@@ -4947,5 +4994,9 @@ path, circle, rect, line {
   .di__price-new {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .g-sli__item {
+    height: 280px;
   }
 }

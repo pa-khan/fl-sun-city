@@ -834,6 +834,9 @@
 			width: 100%
 			height: 100%
 			object-fit: cover
+		iframe
+			width: 100%
+			height: 100%
 			
 			
 .videos
@@ -2253,6 +2256,13 @@
 		br
 			display: none
 
+	.service
+		&__content
+			width: calc(100% - 650px)
+			
+		&__img
+			width: 625px
+
 	.guarantee__content
 		padding-right: 0
 		padding-left: 100px
@@ -2620,6 +2630,14 @@
 		&__btn
 			margin-top: 15px
 			max-width: 280px
+
+
+	.service
+		&__content
+			width: calc(100% - 430px)
+			
+		&__img
+			width: 400px
 
 	.footer
 		padding-top: 40px
@@ -3087,6 +3105,22 @@
 		&__title
 			font-size: 24px
 			line-height: 32px
+
+
+	.service
+		&__tab
+			display: flex
+			flex-direction: column
+		&__content
+			order: 1
+			width: 100%
+			
+		&__img
+			order: 2
+			width: 100%
+			height: auto
+			img
+				height: auto
 			
 	.footer
 		&__feedback
@@ -3747,7 +3781,11 @@
 		&__value
 			font-size: 18px
 		&__img
-			display: none
+			// display: none
+			margin-top: 40px
+			width: calc(100% + 30px)
+			margin-left: -15px
+			margin-right: -15px
 		&__btn
 			display: none
 
@@ -3996,6 +4034,15 @@
 			display: none
 
 
+	.land
+		&__gift
+			margin-left: -52%
+			margin-right: -20%
+
+	.g-sli
+		&__item
+			height: 380px
+
 	.swiper-pagination-bullets.swiper-pagination .swiper-pagination-bullet
 		width: 6px
 		height: 6px
@@ -4043,3 +4090,6 @@
 				line-height: 20px
 			
 			
+	.g-sli
+		&__item
+			height: 280px

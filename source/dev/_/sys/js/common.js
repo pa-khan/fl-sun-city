@@ -177,7 +177,7 @@ if (gallery.length > 0) {
 				320: {
 					slidesPerView: 1,
 				},
-				992: {
+				767: {
 					slidesPerView: 2,
 				},
 				1440: {
